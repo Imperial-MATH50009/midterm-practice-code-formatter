@@ -14,7 +14,7 @@ def test_program_balanced(program):
         "expected True for balanced brackets"
 
 
-@pytest.mark.parametrize("program, lbrac, line0, pos0, rbrac, line1, pos1", [
+@pytest.mark.parametrize("program, rbrac, line1, pos1, lbrac, line0, pos0", [
     ("function [out1, out2] = something(x1, x2}\n"
      "    out1=x1^2;\n    out2=(x2+x1)^3;\nend", "}",
      0, 40, "(", 0, 33),

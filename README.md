@@ -93,7 +93,7 @@ There are three erroneous cases which should be handled:
     baz
    ```
     then the square bracket is the innermost unmatched bracket, and the error
-    would read "[ at line 0 position 1 unmatched." (3 marks)
+    would read "[ on line 0 position 1 unmatched." (3 marks)
 3. If a closing bracket is encountered when no bracket is currently open then
    the method should raise `ValueError` with an error message of the following
    format. The error message should report the first unmatched closing bracket
@@ -102,7 +102,7 @@ There are three erroneous cases which should be handled:
     foo()
     }
    ```  
-   then the error message would read "} at line 1 position 0 unmatched." (3 marks)
+   then the error message would read "} on line 1 position 0 unmatched." (3 marks)
 
 In order to implement this method, you will want to loop through the characters
 of each line and record any open brackets you find on a stack. As you encounter
