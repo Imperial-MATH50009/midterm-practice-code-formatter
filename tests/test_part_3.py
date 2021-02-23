@@ -26,8 +26,8 @@ def test_program_balanced(program):
 def test_program_wrong_bracket(program, lbrac, line0,
                                pos0, rbrac, line1, pos1):
     from brak.brak import Program
-    expr = fr"\{lbrac} on line {line0} position {pos0} matched by \{rbrac} "
-    f"on line {line1} position {pos1}."
+    expr = fr"\{lbrac} on line {line0} position {pos0} matched by \{rbrac} "\
+        f"on line {line1} position {pos1}."
     with pytest.raises(ValueError, match=expr):
         p = Program(program)
         p.verify()
